@@ -9,7 +9,7 @@ function App() {
 
   useEffect(() => {
     const fetchUSers = async () => {
-      const res = await axios.get(`http://localhost:5000/?q=${query}`)
+      const res = await axios.get(`https://backend-api-hrsm.onrender.com/?${query}`)
       setData(res.data)
     }
     if (query.length === 0 || query.length > 2) {
